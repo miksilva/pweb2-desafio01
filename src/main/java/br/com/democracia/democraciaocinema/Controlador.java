@@ -19,6 +19,7 @@ public class Controlador{
         ModelAndView mv = new ModelAndView("resultado.html");
         String novoNome = nome.replaceAll(" ", "");
         mv.addObject("nome", "Seu nome tem " + novoNome.length() + " letras");
+        mv.addObject("senha", "sua senha começa com " + senha.charAt(0));
         if (novoNome.equals("") || novaSenha.equals("")) {
             ModelAndView mj = new ModelAndView("formulario.html");
             mj.addObject("erro1","Os dois campos são obrigatorios");
